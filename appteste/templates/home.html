@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lista de todas as academias disponíveis: </h2>
+    <div class="container text-center">
+        {% for academia in academias %}
+        <ul><strong>{{ academia.nome }}</strong></ul>
+        {% for assinante in academia.assinantes.all %}
+            <p>{{ assinante.nome }}</p>
+        {% endfor %}
+    {% endfor %}
+    </div>
+
+</body>
+</html>
